@@ -46,3 +46,7 @@ let difficulty =
 	localStorage.getItem('difficulty') !== null ?
 	localStorage.getItem('difficulty') :
 	'medium';
+difficultySelect.value =
+	localStorage.getItem('difficulty') !== null ?
+	localStorage.getItem('difficulty') :
+	'medium';
