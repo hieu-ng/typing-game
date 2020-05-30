@@ -50,3 +50,18 @@ difficultySelect.value =
 	localStorage.getItem('difficulty') !== null ?
 	localStorage.getItem('difficulty') :
 	'medium';
+
+text.focus();
+
+function updateTime() {
+	time--;
+	timeEl.innerHTML = time + 's';
+
+	if (time === 0) {
+		clearInterval(timeInterval);
+		// end game
+		gameOver();
+	}
+}
+
+const timeInterval = setInterval(updateTime, 1000);
